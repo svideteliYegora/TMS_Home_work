@@ -3,7 +3,7 @@
 '''
 
 def fib(n: int) -> int:
-    first_number = 0
+    first_number = 1
     second_number = 1
     sum_numbers = 0
     if n > 1:
@@ -18,6 +18,11 @@ def fib(n: int) -> int:
         second_number = sum_numbers
 
 generator_fib = fib(5000)
+
+# print(next(generator_fib))
+# print(next(generator_fib))
+# print(next(generator_fib))
+# print(next(generator_fib))
 
 for i in generator_fib:
     print(i)
