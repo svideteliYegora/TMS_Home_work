@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post">
+    <br>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title"
+               id="title" placeholder="Post title"
+               class="form-control" required
+               value="{{ post['title'] }}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="content">Content</label>
+        <textarea type="text" name="content" id="content"
+                  placeholder="Post content" class="form-control"
+                  required>{{ post['title'] }}</textarea>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" name="author"
+               id="author" placeholder="Post author"
+               class="form-control" required
+               value="{{ post['author'] }}">
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+{% endblock %}
